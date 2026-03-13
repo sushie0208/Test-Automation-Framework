@@ -19,7 +19,7 @@ public class SearchProductTest extends TestBase {
 	
 	@BeforeMethod(description="Valid user logs in th Application")
 	@Test(description = "Verifies user logs into the application", groups = { "e2e",
-			"sanity" }, dataProviderClass = com.ui.dataProvider.LoginDataProvider.class, dataProvider = "LoginTestDataProvider", retryAnalyzer = com.ui.Listener.MyRetryAnalyzer.class)
+			"sanity" })
 	public void setup() {
 
 		myAccountPage = homePage.goToLoginPage().doLoginWith("gejowip815@provko.com", "Password");

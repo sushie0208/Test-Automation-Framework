@@ -10,7 +10,7 @@ public class MyRetryAnalyzer implements IRetryAnalyzer {
 
 	//private static int MAX_NUMBER_OF_ATTEMPTS=Integer.parseInt(PropertiesUtil.readProperty(Env.DEV, "MAX_NUMBER_OF_ATTEMPTS"));
 	
-	private static int MAX_NUMBER_OF_ATTEMPTS=JsonUtility.readJson().getMAX_NUMBER_OF_ATTEMPTS();
+	private final int MAX_NUMBER_OF_ATTEMPTS=JsonUtility.readJson().getMAX_NUMBER_OF_ATTEMPTS();
 	private int currentAttempt=1;
 
 	

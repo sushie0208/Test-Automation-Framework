@@ -13,6 +13,7 @@ import org.testng.annotations.Parameters;
 import com.constants.Browser;
 import com.ui.pages.HomePage;
 import com.utility.BrowserUtility;
+import com.utility.ExtentReportUtility;
 import com.utility.LambdaTestUtility;
 import com.utility.LoggerUtility;
 
@@ -54,6 +55,6 @@ public class TestBase {
 
 			homePage.quit();
 }
-		System.gc();
+		ExtentReportUtility.flushReport();
 	}
 }
