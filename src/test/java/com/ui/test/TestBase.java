@@ -29,7 +29,7 @@ public class TestBase {
 	public void setup( ITestResult result,
 			@Optional("chrome") String browser, 
 			@Optional("false") boolean isLambdaTest, 
-			@Optional("true") boolean isHeadless) {
+			@Optional("false") boolean isHeadless) {
 		this.isLambdaTest = isLambdaTest;
 		
 		if (isLambdaTest) {
@@ -56,6 +56,6 @@ public class TestBase {
 		} else {
 
 			homePage.quit();
-		}
+}
 	}
 }
