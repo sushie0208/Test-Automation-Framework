@@ -49,8 +49,6 @@ public class TestBase {
 	public void tearDown() {
 
 		logger.info("Closing browser");
-
-		BrowserUtility browserUtility = getInstance();
 		if (isLambdaTest) {
 			LambdaTestUtility.quitSession();
 		} else {
