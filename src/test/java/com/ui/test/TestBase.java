@@ -44,7 +44,6 @@ public class TestBase {
 	public BrowserUtility getInstance() {
 		return homePage;
 	}
-
 	@AfterMethod
 	public void tearDown() {
 
@@ -55,5 +54,6 @@ public class TestBase {
 
 			homePage.quit();
 }
+		System.gc();
 	}
 }
