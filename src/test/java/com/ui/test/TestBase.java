@@ -55,6 +55,6 @@ public class TestBase {
 
 			homePage.quit();
 }
-		ExtentReportUtility.flushReport();
+		
 	}
 }

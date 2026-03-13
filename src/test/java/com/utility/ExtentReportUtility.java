@@ -9,11 +9,13 @@ public class ExtentReportUtility {
 	private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
 	public static void setupSparkReporter() {
+		if(extentReports == null)
+		{
 		ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(
 				System.getProperty("user.dir") + "//reports.html");
 		extentReports = new ExtentReports();
 		extentReports.attachReporter(extentSparkReporter);
-
+		}
 	}
 
 	public static void createExtentTest(String testName) {
@@ -26,8 +28,11 @@ public class ExtentReportUtility {
 	}
 
 	public static void flushReport() {
+		if(extentReports!=null)
+		{
 		extentReports.flush();
-		extentTest.remove();
+		}
+	
 	}
 
 }
